@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!-- hero content -->
+    </header>
+
+    <main>
+        <form>
+        <fieldset>
+            <legend>Información personal</legend>
+                <div class="personal-form">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="nombre-solicitante" placeholder="Nombre completo" required>
+                </div>
+                <div class="personal-form">
+                    <label for="email">Correo:</label>
+                    <input type="email" id="email" name="correo-solicitante" placeholder="Correo electrónico" required>
+                </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferencias</legend>
+                <div class="preferencias-form">
+                    <label for="genero">Género:</label>
+                    <select id="genero" name="genero-perrito">
+                        <option value="macho">Macho</option>
+                        <option value="hembra">Hembra</option>
+                    </select>
+                </div>
+                <div class="preferencias-form">
+                    <label for="fecha-visita">Fecha:</label>
+                    <input type="date" id="fecha-visita" name="fecha-solicitante">
+                </div>
+        </fieldset>
+        <div class="button-form">
+            <button type="submit">Enviar solicitud</button>
+        </div>
+        </form>
+    </main>
+
+    <footer>
+        <!-- footer content -->
+    </footer>
+</body>
+</html>
