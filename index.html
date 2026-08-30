@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -15,9 +15,9 @@
   <div class="wrap nav">
     <div class="logo">Huellitas</div>
     <nav class="nav-links">
-      <a href="#">Perros</a>
-      <a href="#">Cómo adoptar</a>
-      <a href="#">Historias</a>
+      <a href="#perros">Perros</a>
+      <a href="#como-funciona">Cómo adoptar</a>
+      <a href="#historias">Historias</a>
       <a href="#">Sobre nosotros</a>
     </nav>
     <a href="#" class="btn btn-primary">Adoptar ahora</a>
@@ -33,15 +33,15 @@
       <h1>Un hogar cambia<br>toda una vida.</h1>
       <p class="lead">Conectamos perros rescatados con familias listas para darles un lugar seguro. Sin trámites eternos, sin vitrinas: solo perros reales esperando a alguien real.</p>
       <div class="hero-actions">
-        <a href="#" class="btn btn-primary">Ver perros disponibles</a>
-        <a href="#" class="btn btn-secondary">Cómo funciona</a>
+        <a href="#perros" class="btn btn-primary">Ver perros disponibles</a>
+        <a href="#como-funciona" class="btn btn-secondary">Cómo funciona</a>
       </div>
     </div>
     <div class="photo hero-photo"><span>Foto — perro rescatado, luz natural</span></div>
   </section>
 
   <!-- PERROS DESTACADOS (Bento) -->
-  <section class="section">
+  <section class="section" id="perros">
     <div class="section-head">
       <h2>Perros esperando un hogar</h2>
       <p>Actualizamos esta selección cada semana con los casos más urgentes.</p>
@@ -55,8 +55,8 @@
             <span class="badge badge-available">Disponible</span>
           </div>
           <p class="meta">3 años · Mediano · Ciudad de México</p>
-          <p style="color:var(--ink-soft);font-size:14px;line-height:1.5;">Tranquilo, ideal para departamento. Le encanta dormir al sol y caminar despacio.</p>
-          <a href="#" class="btn btn-secondary" style="margin-top:8px;">Conocer a Toby</a>
+          <p class="desc">Tranquilo, ideal para departamento. Le encanta dormir al sol y caminar despacio.</p>
+          <a href="#" class="btn btn-secondary">Conocer a Toby</a>
         </div>
       </div>
 
@@ -99,7 +99,7 @@
   </section>
 
   <!-- CÓMO FUNCIONA (Bento simétrico) -->
-  <section class="section">
+  <section class="section" id="como-funciona">
     <div class="section-head">
       <h2>Cómo funciona</h2>
       <p>Cuatro pasos, sin letra pequeña.</p>
@@ -129,7 +129,7 @@
   </section>
 
   <!-- HISTORIAS (Bento editorial) -->
-  <section class="section">
+  <section class="section" id="historias">
     <div class="section-head">
       <h2>Historias que ya pasaron</h2>
       <p>Antes de ser un caso, cada perro fue un hogar esperando.</p>
@@ -161,7 +161,7 @@
   </section>
 
   <!-- CTA FINAL — minimalismo puro -->
-  <section class="section" style="padding-top:0;">
+  <section class="section section-flush">
     <div class="cta">
       <h2>Tu próximo mejor amigo ya te está esperando.</h2>
       <p>Cientos de perros en refugios necesitan un hogar hoy. Empieza por conocerlos.</p>
@@ -175,8 +175,8 @@
   <div class="wrap footer-row">
     <div class="logo">Huellitas</div>
     <div class="footer-links">
-      <a href="#">Perros</a>
-      <a href="#">Cómo adoptar</a>
+      <a href="#perros">Perros</a>
+      <a href="#como-funciona">Cómo adoptar</a>
       <a href="#">Contacto</a>
       <a href="#">Dona</a>
     </div>
