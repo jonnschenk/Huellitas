@@ -1,0 +1,214 @@
+:root{
+    --bg: #FBF9F6;
+    --bg-alt: #F4EFE6;
+    --surface: #FFFFFF;
+    --ink: #2B2622;
+    --ink-soft: #6E655C;
+    --line: #DDD4C7;
+    --accent: #C7623D;
+    --accent-hover: #B0532F;
+    --accent-soft: rgba(199,98,61,0.10);
+    --green: #5B6B4F;
+    --green-soft: rgba(91,107,79,0.10);
+    --radius-lg: 16px;
+    --radius-sm: 12px;
+    --shadow-soft: 0 4px 16px rgba(43,38,34,0.06);
+    --shadow-hover: 0 8px 24px rgba(43,38,34,0.10);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  p{margin:0;}
+  img{display:block;width:100%;height:100%;object-fit:cover;}
+  a{text-decoration:none;color:inherit;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
+  @media (max-width:768px){.wrap{padding:0 20px;}}
+
+  /* placeholder de foto — solo para el mockup */
+  .photo{
+    background:linear-gradient(135deg,#E4D9C7,#D8C7AE);
+    display:flex;align-items:flex-end;justify-content:flex-start;
+    position:relative;
+    color:#8a7b62;
+  }
+  .photo span{
+    font-size:12px;font-weight:500;letter-spacing:.04em;
+    padding:8px 12px;text-transform:uppercase;
+  }
+
+  /* HEADER */
+  header{
+    position:sticky;top:0;z-index:10;
+    background:var(--bg);
+    border-bottom:1px solid transparent;
+    transition:border-color .2s ease;
+  }
+  header.scrolled{border-bottom-color:var(--line);}
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 0;
+  }
+  .logo{font-family:'Fraunces',serif;font-weight:600;font-size:20px;letter-spacing:-0.01em;}
+  .nav-links{display:flex;gap:32px;font-size:15px;color:var(--ink-soft);}
+  .nav-links a:hover{color:var(--ink);}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:12px 22px;border-radius:var(--radius-sm);
+    font-size:14px;font-weight:600;
+    transition:background .15s ease,color .15s ease,border-color .15s ease;
+    cursor:pointer;border:1px solid transparent;
+  }
+  .btn-primary{background:var(--accent);color:#FAF7F2;}
+  .btn-primary:hover{background:var(--accent-hover);}
+  .btn-secondary{border-color:var(--ink);color:var(--ink);background:transparent;}
+  .btn-secondary:hover{background:var(--ink);color:var(--bg);}
+  .btn-ghost{border-color:var(--line);color:var(--ink);background:var(--surface);}
+  .btn-ghost:hover{border-color:var(--ink-soft);}
+
+  @media (max-width:768px){
+    .nav-links{display:none;}
+  }
+
+  /* HERO — minimalismo puro, sin bento */
+  .hero{
+    padding:96px 0 96px;
+    display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+  }
+  .hero-eyebrow{
+    font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:16px;display:block;
+  }
+  .hero h1{font-size:56px;line-height:1.05;margin-bottom:24px;}
+  .hero p.lead{font-size:18px;color:var(--ink-soft);line-height:1.6;margin-bottom:32px;max-width:440px;}
+  .hero-actions{display:flex;gap:12px;}
+  .hero-photo{border-radius:var(--radius-lg);aspect-ratio:4/5;}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;padding:56px 0 64px;gap:32px;}
+    .hero h1{font-size:38px;}
+    .hero-photo{aspect-ratio:16/10;order:-1;}
+  }
+
+  /* SECTION LABELS */
+  .section{padding:80px 0;}
+  .section-head{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    margin-bottom:32px;gap:24px;
+  }
+  .section-head h2{font-size:32px;}
+  .section-head p{color:var(--ink-soft);font-size:15px;max-width:360px;}
+  @media (max-width:768px){
+    .section{padding:56px 0;}
+    .section-head{flex-direction:column;align-items:flex-start;gap:12px;}
+  }
+
+  /* BENTO GRID — perros destacados */
+  .bento{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:20px;
+  }
+  .cell{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    transition:box-shadow .2s ease,transform .2s ease;
+  }
+  .cell:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px);}
+
+  /* card de perro */
+  .dog-card{display:flex;flex-direction:column;}
+  .dog-card .photo{aspect-ratio:4/3;border-radius:var(--radius-lg) var(--radius-lg) 0 0;}
+  .dog-card .body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1;}
+  .dog-card .top-row{display:flex;justify-content:space-between;align-items:flex-start;}
+  .dog-card h3{font-size:20px;}
+  .badge{
+    font-size:11px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;
+    padding:5px 10px;border-radius:999px;white-space:nowrap;
+  }
+  .badge-available{background:var(--green-soft);color:var(--green);}
+  .badge-process{background:var(--accent-soft);color:var(--accent);}
+  .meta{font-size:13px;color:var(--ink-soft);}
+  .dog-card .btn{margin-top:auto;align-self:flex-start;}
+
+  .col-8{grid-column:span 8;}
+  .col-4{grid-column:span 4;}
+  .col-6{grid-column:span 6;}
+  .col-3{grid-column:span 3;}
+  .col-12{grid-column:span 12;}
+
+  .featured-dog{display:grid;grid-template-columns:1.1fr 1fr;}
+  .featured-dog .photo{aspect-ratio:auto;height:100%;border-radius:var(--radius-lg) 0 0 var(--radius-lg);}
+  .featured-dog .body{padding:32px;justify-content:center;}
+  .featured-dog h3{font-size:28px;}
+
+  @media (max-width:900px){
+    .bento{grid-template-columns:repeat(6,1fr);}
+    .col-8,.col-6,.col-4,.col-3,.col-12{grid-column:span 6;}
+    .featured-dog{grid-template-columns:1fr;}
+    .featured-dog .photo{border-radius:var(--radius-lg) var(--radius-lg) 0 0;aspect-ratio:16/10;}
+  }
+  @media (max-width:600px){
+    .bento{grid-template-columns:1fr;}
+    .col-8,.col-6,.col-4,.col-3,.col-12{grid-column:span 1;}
+  }
+
+  /* PROCESO — bento simétrico */
+  .process-cell{padding:28px;display:flex;flex-direction:column;gap:14px;}
+  .process-num{
+    width:36px;height:36px;border-radius:10px;
+    background:var(--bg-alt);color:var(--ink-soft);
+    display:flex;align-items:center;justify-content:center;
+    font-size:14px;font-weight:600;
+  }
+  .process-cell h3{font-size:17px;}
+  .process-cell p{font-size:14px;color:var(--ink-soft);line-height:1.5;}
+
+  /* HISTORIAS — bento editorial */
+  .story-cell{display:grid;grid-template-columns:1fr 1.3fr;}
+  .story-cell .photo{aspect-ratio:auto;height:100%;border-radius:var(--radius-lg) 0 0 var(--radius-lg);}
+  .story-cell .body{padding:28px;display:flex;flex-direction:column;justify-content:center;gap:10px;}
+  .story-cell p.quote{font-size:16px;line-height:1.5;color:var(--ink);}
+  .story-cell .who{font-size:13px;color:var(--ink-soft);}
+
+  .stat-cell{padding:28px;display:flex;flex-direction:column;justify-content:center;gap:6px;}
+  .stat-num{font-family:'Fraunces',serif;font-size:40px;font-weight:600;color:var(--ink);}
+  .stat-label{font-size:13px;color:var(--ink-soft);}
+
+  @media (max-width:900px){
+    .story-cell{grid-template-columns:1fr;}
+    .story-cell .photo{border-radius:var(--radius-lg) var(--radius-lg) 0 0;aspect-ratio:16/9;}
+  }
+
+  /* CTA final — minimalismo puro, sin grid */
+  .cta{
+    background:var(--ink);color:var(--bg);
+    border-radius:var(--radius-lg);
+    padding:72px 48px;text-align:center;
+    display:flex;flex-direction:column;align-items:center;gap:20px;
+  }
+  .cta h2{color:var(--bg);font-size:34px;max-width:560px;}
+  .cta p{color:#C9C1B6;font-size:16px;max-width:440px;}
+  .cta .btn-primary{background:var(--accent);}
+  @media (max-width:768px){
+    .cta{padding:48px 28px;}
+    .cta h2{font-size:26px;}
+  }
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--line);padding:48px 0;margin-top:40px;}
+  .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+  .footer-links{display:flex;gap:24px;font-size:14px;color:var(--ink-soft);}
+  .footer-copy{font-size:13px;color:var(--ink-soft);}
