@@ -9,8 +9,8 @@ Sitio web para un centro de adopción canina. Conecta perros rescatados con fami
 ```
 Huellitas/
 ├── index.html      # Página principal
-└── styles/
-    └── main.css     # Estilos del sitio
+└── css/
+    └── styles.css   # Estilos del sitio
 ```
 
 ## Secciones
