@@ -9,6 +9,7 @@ Sitio web para un centro de adopción canina. Conecta perros rescatados con fami
 ```
 Huellitas/
 ├── index.html      # Página principal
+├── contacto.html   # Formulario de solicitud de adopción
 └── css/
     └── styles.css   # Estilos del sitio
 ```
@@ -19,7 +20,23 @@ Huellitas/
 - **Perros destacados** — Selección semanal de perros disponibles para adopción.
 - **Cómo funciona** — Proceso de adopción en cuatro pasos.
 - **Historias** — Testimonios de adopciones exitosas y estadísticas.
-- **CTA final** — Invitación a ver todos los perros disponibles.
+- **CTA final** — Invitación a solicitar una adopción.
+- **Contacto** (`contacto.html`) — Formulario de solicitud de adopción. Si llegas desde la tarjeta de un perro, ese perro ya viene seleccionado.
+
+## Accesibilidad
+
+- Idioma de la página con `lang="es"` y frases en inglés marcadas con `lang="en"`.
+- HTML semántico: `header`, `nav`, `main`, `section`, `article`, `ol`, `figure`/`blockquote`/`figcaption` y `footer`, con títulos en orden (h1 → h2 → h3).
+- Todas las imágenes tienen un `alt` que describe al perro y lo que pasa en la foto.
+- El formulario usa `label` con `for` en cada campo, `fieldset`/`legend` para las opciones de vivienda y `aria-describedby` para el texto de ayuda.
+- Roles ARIA: `banner`, `contentinfo` y `status` (el mensaje que aparece al enviar el formulario).
+- `aria-label` en la navegación principal, la del pie de página y el logo.
+- Contrastes revisados con WCAG AA: todo el texto supera 4.5:1. El color de acento se oscureció a `#A34D2D` para cumplirlo.
+- Enlace "Saltar al contenido", foco visible al navegar con teclado y `aria-current` en la página activa.
+
+## Créditos
+
+Fotos de [Unsplash](https://unsplash.com), de uso libre bajo la [licencia de Unsplash](https://unsplash.com/license).
 
 ## Uso
 

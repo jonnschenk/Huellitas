@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Huellitas, centro de adopción canina: conoce perros rescatados que buscan un hogar.">
 <title>HUELLITAS — Centro de adopción canina</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,44 +12,50 @@
 </head>
 <body>
 
-<header id="siteHeader">
+<a href="#contenido" class="skip-link">Saltar al contenido principal</a>
+
+<header id="siteHeader" role="banner">
   <div class="wrap nav">
-    <div class="logo">Huellitas</div>
-    <nav class="nav-links">
+    <a href="index.html" class="logo" aria-label="Huellitas, ir al inicio">Huellitas</a>
+    <nav class="nav-links" aria-label="Navegación principal">
       <a href="#perros">Perros</a>
       <a href="#como-funciona">Cómo adoptar</a>
       <a href="#historias">Historias</a>
-      <a href="#">Sobre nosotros</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
-    <a href="#" class="btn btn-primary">Adoptar ahora</a>
+    <a href="contacto.html" class="btn btn-primary">Adoptar ahora</a>
   </div>
 </header>
 
-<main class="wrap">
+<main id="contenido" class="wrap">
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" aria-labelledby="hero-titulo">
     <div>
-      <span class="hero-eyebrow">Centro de adopción canina</span>
-      <h1>Un hogar cambia<br>toda una vida.</h1>
+      <p class="hero-eyebrow">Centro de adopción canina</p>
+      <h1 id="hero-titulo">Un hogar cambia<br>toda una vida.</h1>
       <p class="lead">Conectamos perros rescatados con familias listas para darles un lugar seguro. Sin trámites eternos, sin vitrinas: solo perros reales esperando a alguien real.</p>
       <div class="hero-actions">
         <a href="#perros" class="btn btn-primary">Ver perros disponibles</a>
         <a href="#como-funciona" class="btn btn-secondary">Cómo funciona</a>
       </div>
     </div>
-    <div class="photo hero-photo"><span>Foto — perro rescatado, luz natural</span></div>
+    <div class="photo hero-photo">
+      <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=900&q=80&auto=format&fit=crop" width="900" height="1125" alt="Un corgi y un perro pequeño de pelo largo corren juntos por un camino de tierra al atardecer">
+    </div>
   </section>
 
   <!-- PERROS DESTACADOS (Bento) -->
-  <section class="section" id="perros">
+  <section class="section" id="perros" aria-labelledby="perros-titulo">
     <div class="section-head">
-      <h2>Perros esperando un hogar</h2>
+      <h2 id="perros-titulo">Perros esperando un hogar</h2>
       <p>Actualizamos esta selección cada semana con los casos más urgentes.</p>
     </div>
     <div class="bento">
-      <div class="cell featured-dog col-8">
-        <div class="photo"><span>Foto — Toby</span></div>
+      <article class="cell featured-dog col-8">
+        <div class="photo">
+          <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?w=900&q=80&auto=format&fit=crop" width="900" height="675" loading="lazy" alt="Toby, perro de pelo rojizo y orejas largas, sentado con la lengua afuera en un sendero entre pasto seco">
+        </div>
         <div class="body">
           <div class="top-row">
             <h3>Toby</h3>
@@ -56,131 +63,145 @@
           </div>
           <p class="meta">3 años · Mediano · Ciudad de México</p>
           <p class="desc">Tranquilo, ideal para departamento. Le encanta dormir al sol y caminar despacio.</p>
-          <a href="#" class="btn btn-secondary">Conocer a Toby</a>
+          <a href="contacto.html?perro=toby" class="btn btn-secondary">Conocer a Toby</a>
         </div>
-      </div>
+      </article>
 
-      <div class="cell dog-card col-4">
-        <div class="photo"><span>Foto — Mora</span></div>
+      <article class="cell dog-card col-4">
+        <div class="photo">
+          <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w=600&q=80&auto=format&fit=crop" width="600" height="450" loading="lazy" alt="Mora, perrita pequeña de pelo blanco y rizado, corriendo feliz sobre el pasto">
+        </div>
         <div class="body">
           <div class="top-row">
             <h3>Mora</h3>
             <span class="badge badge-available">Disponible</span>
           </div>
           <p class="meta">1 año · Pequeña · Puebla</p>
-          <a href="#" class="btn btn-secondary">Conocer a Mora</a>
+          <a href="contacto.html?perro=mora" class="btn btn-secondary">Conocer a Mora</a>
         </div>
-      </div>
+      </article>
 
-      <div class="cell dog-card col-4">
-        <div class="photo"><span>Foto — Rocko</span></div>
+      <article class="cell dog-card col-4">
+        <div class="photo">
+          <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80&auto=format&fit=crop" width="600" height="450" loading="lazy" alt="Rocko, perro grande de pelo blanco y café, sonriendo frente al mar">
+        </div>
         <div class="body">
           <div class="top-row">
             <h3>Rocko</h3>
             <span class="badge badge-process">En proceso</span>
           </div>
           <p class="meta">5 años · Grande · Querétaro</p>
-          <a href="#" class="btn btn-secondary">Conocer a Rocko</a>
+          <a href="contacto.html?perro=rocko" class="btn btn-secondary">Conocer a Rocko</a>
         </div>
-      </div>
+      </article>
 
-      <div class="cell dog-card col-4">
-        <div class="photo"><span>Foto — Nube</span></div>
+      <article class="cell dog-card col-4">
+        <div class="photo">
+          <img src="https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w=600&q=80&auto=format&fit=crop" width="600" height="450" loading="lazy" alt="Nube, perra blanca con una mancha negra en el ojo, sonriendo en una calle de la ciudad">
+        </div>
         <div class="body">
           <div class="top-row">
             <h3>Nube</h3>
             <span class="badge badge-available">Disponible</span>
           </div>
           <p class="meta">2 años · Mediana · CDMX</p>
-          <a href="#" class="btn btn-secondary">Conocer a Nube</a>
+          <a href="contacto.html?perro=nube" class="btn btn-secondary">Conocer a Nube</a>
         </div>
-      </div>
+      </article>
     </div>
   </section>
 
   <!-- CÓMO FUNCIONA (Bento simétrico) -->
-  <section class="section" id="como-funciona">
+  <section class="section" id="como-funciona" aria-labelledby="como-titulo">
     <div class="section-head">
-      <h2>Cómo funciona</h2>
+      <h2 id="como-titulo">Cómo funciona</h2>
       <p>Cuatro pasos, sin letra pequeña.</p>
     </div>
-    <div class="bento">
-      <div class="cell process-cell col-3">
-        <div class="process-num">01</div>
+    <ol class="bento">
+      <li class="cell process-cell col-3">
+        <span class="process-num" aria-hidden="true">01</span>
         <h3>Explora perfiles</h3>
         <p>Filtra por tamaño, edad y energía hasta encontrar el que encaje contigo.</p>
-      </div>
-      <div class="cell process-cell col-3">
-        <div class="process-num">02</div>
+      </li>
+      <li class="cell process-cell col-3">
+        <span class="process-num" aria-hidden="true">02</span>
         <h3>Agenda una visita</h3>
         <p>Conoce al perro en persona antes de decidir nada.</p>
-      </div>
-      <div class="cell process-cell col-3">
-        <div class="process-num">03</div>
+      </li>
+      <li class="cell process-cell col-3">
+        <span class="process-num" aria-hidden="true">03</span>
         <h3>Entrevista breve</h3>
         <p>Confirmamos que el hogar sea seguro para ambas partes.</p>
-      </div>
-      <div class="cell process-cell col-3">
-        <div class="process-num">04</div>
+      </li>
+      <li class="cell process-cell col-3">
+        <span class="process-num" aria-hidden="true">04</span>
         <h3>Llévalo a casa</h3>
         <p>Firmamos la adopción y te acompañamos las primeras semanas.</p>
-      </div>
-    </div>
+      </li>
+    </ol>
   </section>
 
   <!-- HISTORIAS (Bento editorial) -->
-  <section class="section" id="historias">
+  <section class="section" id="historias" aria-labelledby="historias-titulo">
     <div class="section-head">
-      <h2>Historias que ya pasaron</h2>
+      <h2 id="historias-titulo">Historias que ya pasaron</h2>
       <p>Antes de ser un caso, cada perro fue un hogar esperando.</p>
     </div>
     <div class="bento">
-      <div class="cell story-cell col-8">
-        <div class="photo"><span>Foto — Ana y Simón</span></div>
-        <div class="body">
-          <p class="quote">"Simón llegó desconfiado y hoy me despierta lamiéndome la cara. No cambiaría nada."</p>
-          <p class="who">Ana, adoptó a Simón en 2025</p>
+      <figure class="cell story-cell col-8">
+        <div class="photo">
+          <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=700&q=80&auto=format&fit=crop" width="700" height="700" loading="lazy" alt="Simón, perro de pelo rojizo, corriendo entre las olas en la orilla del mar">
         </div>
+        <div class="body">
+          <blockquote class="quote">
+            <p>"Simón llegó desconfiado y hoy me despierta lamiéndome la cara. No cambiaría nada."</p>
+          </blockquote>
+          <figcaption class="who">Ana, adoptó a Simón en 2025</figcaption>
+        </div>
+      </figure>
+      <div class="cell stat-cell col-4">
+        <p class="stat-num">320+</p>
+        <p class="stat-label">Adopciones exitosas este año</p>
       </div>
       <div class="cell stat-cell col-4">
-        <div class="stat-num">320+</div>
-        <div class="stat-label">Adopciones exitosas este año</div>
+        <p class="stat-num">98%</p>
+        <p class="stat-label">Adopciones sin devolución</p>
       </div>
-      <div class="cell stat-cell col-4">
-        <div class="stat-num">98%</div>
-        <div class="stat-label">Adopciones sin devolución</div>
-      </div>
-      <div class="cell story-cell col-8">
-        <div class="photo"><span>Foto — Luis y Mafalda</span></div>
-        <div class="body">
-          <p class="quote">"Buscaba compañía después de mudarme solo. Mafalda resultó ser la mejor decisión del año."</p>
-          <p class="who">Luis, adoptó a Mafalda en 2024</p>
+      <figure class="cell story-cell col-8">
+        <div class="photo">
+          <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=700&q=80&auto=format&fit=crop" width="700" height="700" loading="lazy" alt="Mafalda, cachorra golden retriever, sentada en un patio con un tulipán en el hocico">
         </div>
-      </div>
+        <div class="body">
+          <blockquote class="quote">
+            <p>"Buscaba compañía después de mudarme solo. Mafalda resultó ser la mejor decisión del año."</p>
+          </blockquote>
+          <figcaption class="who">Luis, adoptó a Mafalda en 2024</figcaption>
+        </div>
+      </figure>
     </div>
   </section>
 
   <!-- CTA FINAL — minimalismo puro -->
-  <section class="section section-flush">
+  <section class="section section-flush" aria-labelledby="cta-titulo">
     <div class="cta">
-      <h2>Tu próximo mejor amigo ya te está esperando.</h2>
-      <p>Cientos de perros en refugios necesitan un hogar hoy. Empieza por conocerlos.</p>
-      <a href="#" class="btn btn-primary">Ver todos los perros</a>
+      <h2 id="cta-titulo">Tu próximo mejor amigo ya te está esperando.</h2>
+      <p>Cientos de perros en refugios necesitan un hogar hoy. Como dicen los rescatistas: <span lang="en"><em>adopt, don't shop</em></span>.</p>
+      <a href="contacto.html" class="btn btn-primary">Solicitar una adopción</a>
     </div>
   </section>
 
 </main>
 
-<footer>
+<footer role="contentinfo">
   <div class="wrap footer-row">
-    <div class="logo">Huellitas</div>
-    <div class="footer-links">
+    <a href="index.html" class="logo" aria-label="Huellitas, ir al inicio">Huellitas</a>
+    <nav class="footer-links" aria-label="Navegación del pie de página">
       <a href="#perros">Perros</a>
       <a href="#como-funciona">Cómo adoptar</a>
-      <a href="#">Contacto</a>
-      <a href="#">Dona</a>
-    </div>
-    <div class="footer-copy">© 2026 Huellitas · Centro de adopción canina</div>
+      <a href="#historias">Historias</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <p class="footer-copy">© 2026 Huellitas · Centro de adopción canina · Fotos de <a href="https://unsplash.com" lang="en">Unsplash</a></p>
   </div>
 </footer>
 

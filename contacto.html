@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Solicita la adopción de un perro rescatado en Huellitas.">
+<title>Contacto — HUELLITAS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a href="#contenido" class="skip-link">Saltar al contenido principal</a>
+
+<header id="siteHeader" role="banner">
+  <div class="wrap nav">
+    <a href="index.html" class="logo" aria-label="Huellitas, ir al inicio">Huellitas</a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="index.html#perros">Perros</a>
+      <a href="index.html#como-funciona">Cómo adoptar</a>
+      <a href="index.html#historias">Historias</a>
+      <a href="contacto.html" aria-current="page">Contacto</a>
+    </nav>
+    <a href="index.html#perros" class="btn btn-primary">Ver perros</a>
+  </div>
+</header>
+
+<main id="contenido" class="wrap">
+
+  <section class="contact" aria-labelledby="contacto-titulo">
+    <div class="contact-intro">
+      <p class="hero-eyebrow">Solicitud de adopción</p>
+      <h1 id="contacto-titulo">Cuéntanos un poco de ti.</h1>
+      <p class="lead">Llena este formulario y te contactamos en menos de 48 horas para agendar una visita. Ningún dato se comparte con terceros.</p>
+      <div class="photo contact-photo">
+        <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=800&q=80&auto=format&fit=crop" width="800" height="600" alt="Perro tricolor blanco, negro y café mirando de frente a la cámara sobre un fondo rosa claro">
+      </div>
+    </div>
+
+    <form class="form cell" id="adopcionForm" action="#" method="post" novalidate>
+      <p class="form-note">Los campos marcados con <span aria-hidden="true">*</span><span class="sr-only">asterisco</span> son obligatorios.</p>
+
+      <div class="field">
+        <label for="nombre">Nombre completo <span aria-hidden="true">*</span></label>
+        <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="email">Correo electrónico <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-ayuda">
+          <p class="hint" id="email-ayuda">Ejemplo: nombre@correo.com</p>
+        </div>
+        <div class="field">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="perro">Perro que te interesa <span aria-hidden="true">*</span></label>
+        <select id="perro" name="perro" required>
+          <option value="">Selecciona una opción</option>
+          <option value="toby">Toby — 3 años, mediano</option>
+          <option value="mora">Mora — 1 año, pequeña</option>
+          <option value="rocko">Rocko — 5 años, grande</option>
+          <option value="nube">Nube — 2 años, mediana</option>
+          <option value="otro">Aún no lo sé</option>
+        </select>
+      </div>
+
+      <fieldset class="field">
+        <legend>Tipo de vivienda <span aria-hidden="true">*</span></legend>
+        <div class="choices">
+          <div class="choice">
+            <input type="radio" id="vivienda-casa" name="vivienda" value="casa" required>
+            <label for="vivienda-casa">Casa con patio</label>
+          </div>
+          <div class="choice">
+            <input type="radio" id="vivienda-depa" name="vivienda" value="departamento">
+            <label for="vivienda-depa">Departamento</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="mensaje">¿Por qué quieres adoptar?</label>
+        <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+      </div>
+
+      <div class="choice">
+        <input type="checkbox" id="acepto" name="acepto" required>
+        <label for="acepto">Acepto que Huellitas me contacte sobre esta solicitud <span aria-hidden="true">*</span></label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="wrap footer-row">
+    <a href="index.html" class="logo" aria-label="Huellitas, ir al inicio">Huellitas</a>
+    <nav class="footer-links" aria-label="Navegación del pie de página">
+      <a href="index.html#perros">Perros</a>
+      <a href="index.html#como-funciona">Cómo adoptar</a>
+      <a href="index.html#historias">Historias</a>
+      <a href="contacto.html" aria-current="page">Contacto</a>
+    </nav>
+    <p class="footer-copy">© 2026 Huellitas · Centro de adopción canina · Fotos de <a href="https://unsplash.com" lang="en">Unsplash</a></p>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  });
+
+  // Preselecciona el perro si viene desde una tarjeta (contacto.html?perro=toby)
+  const form = document.getElementById('adopcionForm');
+  const status = document.getElementById('formStatus');
+  const perro = new URLSearchParams(location.search).get('perro');
+  if (perro && form.perro.querySelector(`option[value="${perro}"]`)) {
+    form.perro.value = perro;
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const invalid = form.querySelector(':invalid');
+    if (invalid) {
+      status.textContent = 'Revisa los campos obligatorios antes de enviar.';
+      status.classList.remove('ok');
+      invalid.focus();
+      form.reportValidity();
+      return;
+    }
+    status.textContent = '¡Gracias! Recibimos tu solicitud y te escribiremos pronto.';
+    status.classList.add('ok');
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
